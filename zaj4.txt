@@ -1,0 +1,79 @@
+1. Serwery
+
+Adres podsieci: 10.0.0.0/24
+
+Pierwszy adres hosta: 10.0.0.1
+
+Ostatni adres hosta: 10.0.0.254
+
+Adres broadcast: 10.0.0.255
+
+Ilość hostów: 254
+
+Nadwyżka (wzgl. min): 154 (254 - 100)
+
+Nadwyżka (wzgl. OP): 103 (254 - 151)
+
+2. Biurowe
+
+Adres podsieci: 10.0.1.0/25
+
+Pierwszy adres hosta: 10.0.1.1
+
+Ostatni adres hosta: 10.0.1.126
+
+Adres broadcast: 10.0.1.127
+
+Ilość hostów: 126
+
+Nadwyżka (wzgl. min): 66 (126 - 60)
+
+Nadwyżka (wzgl. OP): 35 (126 - 91)
+
+3. Drukarki
+
+Adres podsieci: 10.0.1.128/26
+
+Pierwszy adres hosta: 10.0.1.129
+
+Ostatni adres hosta: 10.0.1.190
+
+Adres broadcast: 10.0.1.191
+
+Ilość hostów: 62
+
+Nadwyżka (wzgl. min): 42 (62 - 20)
+
+Nadwyżka (wzgl. OP): 31 (62 - 31)
+
+4. IoT
+
+Adres podsieci: 10.0.1.192/27
+
+Pierwszy adres hosta: 10.0.1.193
+
+Ostatni adres hosta: 10.0.1.222
+
+Adres broadcast: 10.0.1.223
+
+Ilość hostów: 30
+
+Nadwyżka (wzgl. min): 18 (30 - 12)
+
+Nadwyżka (wzgl. OP): 11 (30 - 19)
+
+5. Zarządzanie
+
+Adres podsieci: 10.0.1.224/28
+
+Pierwszy adres hosta: 10.0.1.225
+
+Ostatni adres hosta: 10.0.1.238
+
+Adres broadcast: 10.0.1.239
+
+Ilość hostów: 14
+
+Nadwyżka (wzgl. min): 10 (14 - 4)
+
+Nadwyżka (wzgl. OP): 7 (14 - 7)
