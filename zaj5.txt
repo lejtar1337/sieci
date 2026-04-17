@@ -1,0 +1,59 @@
+1Lista interfejsów sieciowych (format nazwa-status):
+ip -br link | awk '{print $1 "\t" $2}'
+Źródło: man ip-link
+
+2Adres MAC routera (bramy domyślnej):
+ip neigh show | grep $(ip route show default | awk '{print $3}')
+Źródło: man ip-neighbour, man ip-route
+
+3Zmiana adresu MAC karty Ethernet (eth0):
+sudo ip link set dev eth0 down && sudo ip link set dev eth0 address 00:11:22:33:44:55 && sudo ip link set dev eth0 up
+Źródło: man ip-link
+
+4Ping wszystkich urządzeń jednocześnie w podsieci (wymaga podania adresu rozgłoszeniowego, np. 192.168.1.255):
+ping -b 192.168.1.255
+Źródło: man ping
+
+5Skan całej podsieci w poszukiwaniu urządzeń z otwartym portem 22 (np. 192.168.1.0/24):
+nmap -p 22 --open 192.168.1.0/24
+Źródło: man nmap
+
+6Skan wszystkich portów otwartych na interfejsie lo (loopback):
+nmap -p- 127.0.0.1
+Źródło: man nmap
+
+7Porty otwarte w systemie z PID i nazwą programu:
+sudo ss -tulpn (lub sudo netstat -tulpn)
+Źródło: man ss, man netstat
+
+8Wyświetl trasę domyślną w systemie:
+ip route show default
+Źródło: man ip-route
+
+9Trasa pakietów do serwera kosmatka.pl:
+traceroute kosmatka.pl
+Źródło: man traceroute
+
+10Adres serwera DNS ustawiony w systemie:
+grep nameserver /etc/resolv.conf
+Źródło: man resolv.conf
+
+11Lista statycznych wpisów DNS w systemie:
+cat /etc/hosts
+Źródło: man hosts
+
+12Rekord DNS poczty e-mail (MX) kosmatka.pl przez serwer 8.8.8.8:
+dig @8.8.8.8 kosmatka.pl MX +short
+Źródło: man dig
+
+13Adres IPv6 hosta google.pl:
+dig google.pl AAAA +short
+Źródło: man dig
+
+14Data rejestracji domeny kosmatka.pl i do kiedy jest opłacona:
+whois kosmatka.pl | grep -iE "created|renewal"
+Źródło: man whois
+
+15Adres strony z listą domen .pl usuniętych dzisiejszego dnia:
+https://www.dns.pl/deleted_domains.txt
+Źródło: Dokumentacja NASK (dns.pl)
